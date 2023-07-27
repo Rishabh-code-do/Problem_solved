@@ -1,0 +1,15 @@
+class Solution {
+public:
+    string getPermutation(int n, int k) {
+        string s;
+        for(int i=49;i<49+n;i++)
+        {
+            s=s+(char)i;
+        }
+        for(int i=1;i<k;i++)
+        {
+            next_permutation(s.begin(),s.end());
+        }
+        return s;
+    }
+};
